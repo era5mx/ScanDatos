@@ -49,12 +49,12 @@ public class ScanDatos {
 						|| nameFile.endsWith(".log")
 						|| nameFile.endsWith(".LOG")) {
 					System.out.print("El archivo [" + nameFile);
-					if (nameFile != "") {
-						long linesFile = contarLineas(nameFile);
+					long linesFile = contarLineas(nameFile);
+					if (linesFile > 0) {
 						totalReg = totalReg + linesFile;
 						System.out.println("] tiene " + linesFile + " lineas");
 					} else {
-						System.out.println(" esta vacio.");
+						System.out.println("] esta vacio.");
 					}
 				} else {
 					ignoreFiles++;
